@@ -12,7 +12,7 @@
         return $app['twig']->render('front.twig');
     });
 
-    $app->get("")
+
 
     return $app;
 ?>
