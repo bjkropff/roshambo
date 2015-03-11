@@ -18,17 +18,20 @@
                 if ($input2 == 'rock') {
                     return 'player2';
                 }
-
+                elseif ($input2 == 'paper'){
+                    return 'player1';
+                }
+            }
+            elseif ($input1 == 'paper') {
+                if ($input2 == 'rock') {
+                    return 'player1';
+                }
+                elseif ($input2 == 'scissors'){
+                    return 'player2';
+                }
             }
 
-
-
         }
-
-
-
-
-
 
     }
 ?>

@@ -62,6 +62,28 @@
 
             $this->assertEquals("player1", $result);
         }
+
+        function test_PaperVerseScissors_Player2()
+        {
+            $test_RockPaperScissors = new RockPaperScissors;
+            $input1 = "paper";
+            $input2 = "scissors";
+
+            $result = $test_RockPaperScissors->returnWinner($input1, $input2);
+
+            $this->assertEquals("player2", $result);
+        }
+
+        function test_ScissorsVersePaper_Player1()
+        {
+            $test_RockPaperScissors = new RockPaperScissors;
+            $input1 = "scissors";
+            $input2 = "paper";
+
+            $result = $test_RockPaperScissors->returnWinner($input1, $input2);
+
+            $this->assertEquals("player1", $result);
+        }
     }
 
 
