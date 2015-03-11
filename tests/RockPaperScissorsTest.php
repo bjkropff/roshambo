@@ -52,15 +52,15 @@
 
         }
 
-        function test_RockVersePaper_Player2()
+        function test_PaperVerseRock_Player2()
         {
             $test_RockPaperScissors = new RockPaperScissors;
-            $input1 = "rock";
-            $input2 = "paper";
+            $input1 = "paper";
+            $input2 = "rock";
 
             $result = $test_RockPaperScissors->returnWinner($input1, $input2);
 
-            $this->assertEquals("player2", $result);
+            $this->assertEquals("player1", $result);
         }
     }
 
