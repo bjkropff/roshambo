@@ -18,6 +18,15 @@
         return $app['twig']->render('playgame.twig', array('game_results' => $play1));
     });
 
+    $app->get("/computer", function() use ($app){
+        $computerpick = array(0 => 'scissors', 1 => 'rock', 2 => 'paper');
+        $random_number = rand(0,2);
+        $comp = new RockPaperScissors($_GET['input1'], $computerpick[$random_number]);
+
+        return $app['twig']->render('computer.twig', array('WINNING' => $comp));
+
+    });
+
 
     return $app;
 ?>

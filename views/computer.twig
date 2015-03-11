@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Battle Complete</title>
+    </head>
+    <body>
+        <p>Player 1 picks: {{ WINNING.getInput1 }}</p>
+        <p>Computer picks: {% if WINNING.getInput1 == 'rock' %}
+            paper
+
+        {% elseif WINNING.getInput1 == 'paper' %}
+        scissors
+        {% elseif WINNING.getInput1 == 'scissors' %}
+        rock
+        {%endif%}
+
+        {% if WINNING.returnWinner() == 'Player 2 WINNER' %}
+        <p>YOU LOSE HUMAN!</p>
+        {% else %}
+        <p>Result is : {{WINNING.returnWinner()}}</p>
+        {% endif %}
+
+    </body>
+</html>
