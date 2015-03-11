@@ -15,7 +15,7 @@
     $app->get("/playgame", function() use ($app){
         $play1 = new RockPaperScissors($_GET['input1'], $_GET['input2']);
 
-        return $app['twig']->render('playgame.twig', array('game_results' => $play1));
+        return $app['twig']->render('playgame.twig', array('game_results' => $play1, 'player1input' => $_GET['input1'], 'player2input' => $_GET['input2']));
     });
 
     $app->get("/computer", function() use ($app){
