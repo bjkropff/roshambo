@@ -12,6 +12,9 @@
         return $app['twig']->render('front.twig');
     });
 
+    $app->get ("/playgame", function() use ($app){
+        return $app['twig']->render('playgame.twig');    
+    });
 
 
     return $app;
