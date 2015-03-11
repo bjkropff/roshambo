@@ -1,39 +1,59 @@
 <?php
     class RockPaperScissors
     {
-        function returnWinner($input1, $input2){
-            if ($input1 == $input2) {
-                return "draw";
-            }
-            elseif ($input1 == 'rock') {
+        private $input1;
+        private $input2;
 
-                if ($input2 == 'scissors') {
-                    return 'player1';
+        function __construct($input1, $input2) {
+            $this->input1 = strtolower($input1);
+            $this->input2 = strtolower($input2);
+
+        }
+
+        function getInput1(){
+            return $this->input1;
+        }
+        function getInput2(){
+            return $this->input2;
+        }
+
+        function returnWinner(){
+
+            
+
+
+                if ($this->input1 == $this->input2) {
+                    return "Draw";
                 }
+                elseif ($this->input1 == 'rock') {
+
+                    if ($this->input2 == 'scissors') {
+                        return 'Player 1';
+                    }
+                    else {
+                        return 'Player 2';
+                    }
+                }
+
+                elseif ($this->input1 == 'scissors') {
+
+                    if ($this->input2 == 'rock') {
+                        return 'Player 2';
+                    }
+                    else {
+                        return 'Player 1';
+                    }
+                }
+
                 else {
-                    return 'player2';
-                }
-            }
 
-            elseif ($input1 == 'scissors') {
-
-                if ($input2 == 'rock') {
-                    return 'player2';
+                    if ($this->input2 == 'rock') {
+                        return 'Player 1';
+                    }
+                    else {
+                        return 'Player 2';
+                    }
                 }
-                else {
-                    return 'player1';
-                }
-            }
-
-            else {
-
-                if ($input2 == 'rock') {
-                    return 'player1';
-                }
-                else {
-                    return 'player2';
-                }
-            }
 
         }
 
